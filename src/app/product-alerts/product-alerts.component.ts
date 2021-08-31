@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from '../products';
 
 @Component({
   selector: 'app-product-alerts',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-alerts.component.css']
 })
 export class ProductAlertsComponent implements OnInit {
-
   constructor() { }
-
+  @Input()
+  productI !: Product;
+  
+  @Output()
+  notifyme = new EventEmitter();
+  clickme = new EventEmitter();
   ngOnInit() {
   }
 

@@ -10,9 +10,14 @@
   </p>
   <button (click) = "share()">
     Share
-  </button>
-  <app-product-alerts>
+  </button>  &nbsp;&nbsp;&nbsp;&nbsp;
+  <app-product-alerts
+  [productI] = "product"
+  (notifyme) = "onNotify()"
+  (clickme) = "onClick()">
   </app-product-alerts>
+  <app-product-details>
+  </app-product-details>
 </div>
 
 
